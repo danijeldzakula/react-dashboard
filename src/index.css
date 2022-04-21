@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html { @apply overflow-hidden }
+  /* main content */
+  .main { @apply relative grid h-screen }
+  .main-layout { @apply grid-rows-[3rem_minmax(auto,auto)] }
+  /* section */
+  .section { @apply relative p-4 grid w-full h-full }
+  /* background image on section */
+  .bg-section { @apply bg-cover bg-center bg-no-repeat } 
+  /* wrapper */
+  .wrapper { @apply relative inset-0 w-full h-full }
+  /* overflow */
+  .overflow-lock { @apply absolute inset-0 w-full h-full }
+  .overflow-style { @apply relative inset-0 w-full h-full overflow-auto }
+  /* table top header */
+  .table-header { @apply sticky top-0 right-0 left-0 w-full h-[4rem] pl-4 pr-4 grid grid-flow-col auto-cols-max items-center justify-between border-b-[1px] }    
+  /* default and desktop table */ 
+  .table { @apply relative w-full p-0 m-0 whitespace-nowrap }
+  .table .thead { @apply sticky top-0 w-full h-[42px] bg-white z-10 shadow-sm }
+  .table .thead tr th,
+  .table .tbody tr td { @apply p-3 text-left border border-t-0 }    
+  .table .thead tr th:first-of-type,
+  .table .tbody tr td:first-of-type { @apply min-w-[120px] max-w-[200px] text-center border-l-0 }
+  .table .thead tr th,
+  .table .tbody tr td { @apply min-w-[120px] }    
+  .table .thead tr th:last-of-type,
+  .table .tbody tr td:last-of-type { @apply border-r-0 }
+  .table .tbody tr:nth-child(odd) { @apply bg-gray-100 }
+  .table .tbody tr:nth-child(even) { @apply bg-white }
+  .table th, 
+  .table td { @apply p-0 } 
+  .table .avatar { @apply w-[80px] h-[80px] object-cover rounded-full block mx-auto }
+  .form .form-input { @apply w-full h-9 p-0 pl-2 pr-2 bg-slate-100 }
+  .form .form-avatar { @apply w-24 h-24 object-cover rounded-full border-2 border-white }
+  /* sidebar */
+  .sidebar-nav { @apply relative bg-blue-500 overflow-y-auto }
+  /* sidebar navigation */
+  .nav { @apply relative grid gap-x-4 grid-cols-[3rem_minmax(auto,auto)] grid-rows-[3rem_minmax(auto,auto)] h-full items-center }
+  /* logo */
+  .nav .nav-logo { @apply relative grid place-items-center }
+  /* sidebar nav links */
+  .nav .nav-links { @apply relative grid grid-flow-col auto-cols-max w-full }
+  .nav .nav-link { @apply relative grid grid-cols-1 text-white }
+  .nav .icon { @apply relative w-[24px] h-[24px] bg-cover bg-no-repeat bg-center }
+  /* section (home, login) */
+  .section-home, 
+  .section-login,
+  .section-forgot, 
+  .section-error { @apply grid place-items-center }
+  /* centred box */
+  .center-box { @apply relative w-full h-full max-w-[600px] max-h-[600px] bg-slate-100 rounded-sm }
+  /* loading */
+  .loading { @apply absolute inset-0 z-[999] bg-white }
+  /* message */
+  .message { @apply relative bg-white }
+  /* sidebar */
+  .sidebar { @apply fixed grid w-full max-w-xs z-[1001] top-0 bottom-0 ease-in-out duration-300 delay-100 bg-white grid-rows-[3rem_minmax(auto,auto)] }
+  .sidebar-right { @apply right-0 translate-x-full }
+  .sidebar-right.is-active { @apply translate-x-0 }  
+
+  /* sidebar header */
+  .sidebar-header { @apply grid items-center pl-4 pr-4 border-b-[1px] }
+  .sidebar-close-btn { @apply w-[1rem] h-[1rem] bg-no-repeat bg-cover opacity-70 }
+  .sidebar-content { @apply relative inset-0 }
+
+  /* overlay */
+  .overlay { @apply fixed inset-0 ease-in-out duration-300 delay-100 z-[-10] }
+  .overlay.is-active { @apply bg-gray-900 opacity-40 z-[1000] }
+
+  /* modal */
+  .modal { @apply fixed grid grid-rows-[3rem_minmax(auto,auto)] z-[-1] bg-white top-1/2 left-1/2 -translate-y-3/4 -translate-x-1/2 w-full max-w-md h-full max-h-52 overflow-y-auto opacity-0 invisible ease-in-out duration-300 delay-100 }
+  .modal.is-active { @apply bg-white z-[1001] opacity-100 visible  -translate-y-1/2 }
+
+  /* modal header */
+  .modal-header { @apply grid items-center pl-4 pr-4 border-b-[1px] }
+  .modal-close-btn { @apply w-[1rem] h-[1rem] bg-no-repeat bg-cover opacity-70 }
+  /* modal content */
+  .modal-content { @apply relative overflow-y-auto p-4 }
+
+  /* overflow lock */
+  .overflow-lock { @apply absolute inset-0 w-full h-full overflow-hidden }
+  .overflow-unlock { @apply relative w-full h-full overflow-x-hidden overflow-y-auto pt-8 pb-8 pr-4 pl-4 }
+  /* search bar */
+  .search-bar { @apply h-9 w-full max-w-sm pr-4 pl-4 outline-none bg-gray-100 text-gray-800 }
+
+  /* button */
+  .btn { @apply outline-none }
+  /* button outline primary */
+  .btn-outline-primary { @apply w-full h-9 bg-white border-2 border-white font-semibold text-gray-500 rounded-sm pl-4 pr-4 }
+  /* button primary */
+  .btn-primary { @apply w-full h-9 bg-blue-500 border-2 border-blue-500 font-semibold text-white rounded-sm pl-4 pr-4 }
+
+  /* space bettwen */
+  .space-between { @apply grid grid-flow-col auto-cols-max items-center justify-between }
+  .grid-center { @apply grid place-items-center }
+
+  /* global media query */
+  /* media query md (MIN-width) */
+  @media screen(md) {
+    /* main content */
+    .main-layout { @apply grid-rows-1 grid-cols-[4rem_minmax(auto,auto)] }
+    /* sidebar nav */
+    .nav { @apply pt-4 pb-4 }
+    /* sidebar navigation */
+    .nav { @apply grid-cols-1 items-start gap-y-4 }
+    /* sidebar nav links */
+    .nav .nav-links { @apply auto-cols-auto grid-flow-row }
+    .nav .nav-logo,
+    .nav .nav-link { @apply w-full h-[3rem] }
+    .nav .nav-logo .logo-brand { @apply grid w-full h-full pr-4 pl-4 bg-[length:8rem] bg-no-repeat bg-center }
+  }
+
+  /* media query md (MAX-width) */
+  @media screen(max-md) {
+    /* nav */
+    .nav { @apply justify-between pr-4 pl-4 }
+    .nav .nav-logo { @apply w-[3rem] h-[3rem] }
+    .nav .nav-link { @apply w-[3rem] h-[3rem] place-items-center }
+    /* logo */
+    .nav .nav-logo .icon { @apply relative grid }
+    /* responsive mobile table */
+    .table tbody tr:not(:last-child) { @apply mt-0 mb-0 }
+    .table tbody tr:first-child { @apply mt-0 }
+    .table tbody tr:last-child > td:last-child{ @apply border-b-0 }
+    .table tr > td:not(:last-child) { @apply border-b-inherit }
+  }
+
+  /* media query lg (MIN-width) */
+  @media screen(lg) {
+    /* main content */
+    .main-layout { @apply grid-cols-[200px_minmax(auto,auto)] }
+    /* nav */
+    .nav { @apply grid-rows-[6rem_minmax(auto,1fr)] pt-8 h-full }        
+    /* logo */
+    .nav .nav-logo .icon, 
+    .nav .nav-link .icon { @apply hidden }   
+    /* sidebar nav links */
+    .nav .nav-logo { @apply h-[6rem] }
+    .nav .nav-link { @apply items-center indent-8 }
+    /* table top header */
+    .table-header { @apply pl-6 pr-6 }      
+  }
+
+  /* media query lg (MAX-width) */
+  @media screen(max-lg) {
+    .nav .nav-link { @apply place-items-center } 
+    /* sidebar nav links */
+    .nav .nav-logo .logo-brand { @apply hidden }  
+  }
+}
+
+

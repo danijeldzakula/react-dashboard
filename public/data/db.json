@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "avatar": {
+        "image_path": "./images/profile/profile-guy-three.png",
+        "image_alt": "Profile image of Nicholas Pountney"
+      },
+      "first_name": "Danijel",
+      "last_name": "Dzakula",
+      "email": "danijeldzakula@gmail.com",
+      "number": "0643459161",
+      "street": "Somborski Put",
+      "city": "Bajmok",
+      "ptt": "24210",
+      "role": "Frontend Dev",
+      "country": "Srbija",
+      "password": "manjaca",
+      "status": "Active",
+      "tekuci_racun": "0058504056565",
+      "id": 13
+    },
+    {
+      "avatar": {
+        "image_path": "./images/profile/profile-guy-three.png",
+        "image_alt": "Profile image of Nicholas Pountney"
+      },
+      "first_name": "Majkl",
+      "last_name": "Jackson",
+      "email": "majkjack@gmail.com",
+      "number": "0643564646",
+      "street": "Avenue",
+      "city": "Miami",
+      "ptt": "55750",
+      "role": "Web Dev",
+      "country": "California",
+      "password": "california",
+      "status": "Active",
+      "tekuci_racun": "005857454646",
+      "id": 14
+    },
+    {
+      "avatar": {
+        "image_path": "./images/profile/profile-guy-three.png",
+        "image_alt": "Profile image of Nicholas Pountney"
+      },
+      "first_name": "Ilija",
+      "last_name": "Tripkovic",
+      "email": "ilijatripkovic@gmail.com",
+      "number": "0603424656",
+      "street": "Partizanska 8",
+      "city": "Beograd",
+      "ptt": "24000",
+      "role": "Frontend Dev",
+      "country": "Serbia",
+      "password": "password",
+      "status": "Active",
+      "tekuci_racun": "0058500424234",
+      "id": 15
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "client_name": "Unify",
+      "avatar": "https://media.istockphoto.com/photos/smart-home-symbol-picture-id1314037715?k=20&m=1314037715&s=612x612&w=0&h=hDYBWJEgIP66xyqwKPw9UbHLg6g1WhcKENjLgRQbs1s=",
+      "email": "unify@test.com",
+      "manager": "Mirko Vrknic",
+      "manager-factor": "1",
+      "paymentMethod": "PayPal"
+    },
+    {
+      "id": 2,
+      "client_name": "Like Media Inc",
+      "avatar": "https://media.istockphoto.com/photos/one-like-social-media-notification-with-thumb-up-icon-picture-id1200899039?k=20&m=1200899039&s=612x612&w=0&h=RScG0RGONTAuYLeoREVl9c6xtTsOlJAbcUjZ9y2Z244=",
+      "email": "likeManager@test.com",
+      "manager": "Jelisaveta Milovic",
+      "manager-factor": "0.75",
+      "paymentMethod": "Stemi"
+    },
+    {
+      "id": 3,
+      "client_name": "Smile holding",
+      "avatar": "https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "email": "unify@test.com",
+      "manager": "Mirko Vrknic",
+      "manager-factor": "1",
+      "paymentMethod": "PayPal"
+    },
+    {
+      "id": 4,
+      "client_name": "Bon Ton",
+      "avatar": "https://images.unsplash.com/photo-1602934445884-da0fa1c9d3b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=958&q=80",
+      "email": "unify@test.com",
+      "manager": "Jelisaveta Milovic",
+      "manager-factor": "1",
+      "paymentMethod": "PayPal"
+    },
+    {
+      "id": 5,
+      "client_name": "C Dounts LTD",
+      "avatar": "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
+      "email": "unify@test.com",
+      "manager": "Jelena Ivanovic",
+      "manager-factor": "0.5",
+      "paymentMethod": "Cash"
+    }
+  ]
+}
